@@ -76,7 +76,7 @@
                 <version>3.0.0-M4</version>
                 <configuration>
                     <includes>
-                        <include>**/*LoginApplicationWithPageObject.java</include>
+                        <include>**/*LoginDDTest.java</include>
                         <include>**/Test*.java</include>
                         <include>**/*TestSuite.java</include>
                         <include>**/When*.java</include>
@@ -84,9 +84,8 @@
                     <systemPropertyVariables>
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
                     </systemPropertyVariables>
-                    <parallel>classes</parallel>
-                    <threadCount>${parallel.tests}</threadCount>
-                    <forkCount>${parallel.tests}</forkCount>
+                   
+                   
                 </configuration>
                 <executions>
                     <execution>
