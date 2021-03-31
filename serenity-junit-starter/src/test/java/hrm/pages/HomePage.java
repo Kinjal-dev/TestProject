@@ -6,7 +6,15 @@ public class HomePage {
 	
 	HomePageImplementation home;
 	
-	@Step("This step will verify the Title")
+	
+	@Step("This step will open the landing page")
+	public void navigateToURL()
+
+	{
+		home.navigateToURL();
+	}
+	
+	@Step("This step will verify the Title of the landing page")
 	public void verifyTitle()
 
 	{
@@ -19,9 +27,18 @@ public class HomePage {
 		home.enterUsernamePassword();
 	}
 	
-	@Step("This will verify the dashboard")
-	public void verifyDashboard()
+	
+	@Step("This step will read login data from csv")
+	
+	public void enterCredentialsviacsv(String username, String password)
 	{
-		home.verifyLogin();
+		home.enterUsernamePasswordviaCSV(username, password);
 	}
+	
+	@Step("This step will verify error message on Invalid login")
+	public void verifyinvalidLogin()
+	{
+		home.verifyinvalidLogin();
+	}
+	
 }
